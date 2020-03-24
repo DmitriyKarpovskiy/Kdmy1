@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
-    protected $table = 'tasks';
+    protected $table = 'task';
 
     protected $fillable = ['id', 'name', 'order', 'status', 'project_id'];
 
@@ -44,7 +44,7 @@ class Task extends Model
       }
 
       DB::commit();
-      
+
       return true;
 
     }
