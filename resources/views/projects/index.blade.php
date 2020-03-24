@@ -12,13 +12,13 @@
           
 
           <div class="col-md-1">
-            <a href="{{ route('projects.edit', ['id' => $project->id]) }}">
+            <a href="{{ route('projects.edit', [$project->id]) }}">
             <i class="fa fa-pen"></i>
             </a>
           </div>
           <div class="col-md-1">
             <i class="fa fa-trash-alt remove-project"></i>
-            <form  action="{{ route('projects.destroy', ['id' => $project->id])  }}" method="post">
+            <form  action="{{ route('projects.destroy', [$project->id])  }}" method="post">
               <input type="hidden" name="_method" value="DELETE">
               <input type="hidden" name="_token" value="{{ csrf_token()  }}">
             </form>
@@ -65,12 +65,12 @@
                        <i class="fa fa-angle-down"></i>
                      </div>
                       <div class="col-md-1 height_100">
-                          <a href="{{ route('tasks.edit', ['id' => $task->id]) }}">
+                          <a href="{{ route('tasks.edit', [$task->id]) }}">
                               <i class="fa fa-pen task-gi"></i>
                           </a>
                       </div>
                      <div class="col-md-1 height_100">
-                         <form action="{{ route('tasks.destroy', ['id' => $task->id]) }}" method="post">
+                         <form action="{{ route('tasks.destroy', [$task->id]) }}" method="post">
                              <input type="hidden" name="_method" value="DELETE">
                              <input type="hidden" name="_token" value="{{ csrf_token() }}">
                          </form>
