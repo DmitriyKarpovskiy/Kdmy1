@@ -11,7 +11,7 @@
 
           
 
-          <div class="col-md-1">
+          <div class="col-md-1 inl-b">
             <a href="{{ route('projects.edit', [$project->id]) }}">
             <i class="fa fa-pen"></i>
             </a>
