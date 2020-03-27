@@ -26,7 +26,7 @@ class TasksController extends Controller
     $task->order = Task::getLastOrder($request->project_id) + 1;
     return $task->save()
     ? redirect()->route('home')->withSuccess('Task created')
-    : redirect()->route('home')->withError('Task c doesn`t created');
+    : redirect()->route('home')->withError('Task wasn`t created');
   }
 
   public function edit($id)
@@ -44,14 +44,14 @@ class TasksController extends Controller
      $task->name = $request->name;
      return $task->save()
      ? redirect()->route('home')->withSuccess('Task updated')
-     : redirect()->route('home')->withError('Task c doesn`t updated');
+     : redirect()->route('home')->withError('Task wasn`t updated');
   }
 
   public function destroy($id)
   {
     return $task = Task::destroy($id)
     ? redirect()->route('home')->withSuccess('Task deleted')
-    : redirect()->route('home')->withError('Task c doesn`t deleted');
+    : redirect()->route('home')->withError('Task wasn`t deleted');
   }
 
   public function change_status($id)
@@ -66,6 +66,6 @@ class TasksController extends Controller
     $result = Task::swap_order($request->target_id, $request->replacement_id);
     return $result
       ? redirect()->route('projects.index')->withSuccess('order changed')
-      : redirect()->route('projects.index')->withError('order doesn`t changed');
+      : redirect()->route('projects.index')->withError('order wasn`t changed');
   }
 }

@@ -31,8 +31,7 @@
 
                     <!-- Branding Image -->
                     <div class="navbar-brand text-center">
-                      SIMPLE TODO LIST <br>
-                      from ruby garage
+                      SIMPLE TODO LIST
                     </div>
                 </div>
 

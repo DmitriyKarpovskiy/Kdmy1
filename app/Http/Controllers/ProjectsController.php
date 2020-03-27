@@ -47,14 +47,14 @@ class ProjectsController extends Controller
         ]);
         $project->name = $request->name;
         return $project->save()
-          ? redirect()->route('projects.index')->withSuccess('project updated')
-          : redirect()->route('projects.index')->withError('project doesn`t updated');
+          ? redirect()->route('projects.index')->withSuccess('Project updated')
+          : redirect()->route('projects.index')->withError('Project wasn`t updated');
     }
 
     public function destroy($id)
     {
       return Project::destroy($id)
-      ? redirect()->route('projects.index')->withSuccess('project deleted')
-      : redirect()->route('projects.index')->withError('project doesn`t deleted');
+      ? redirect()->route('projects.index')->withSuccess('Project deleted')
+      : redirect()->route('projects.index')->withError('Project wasn`t deleted');
     }
 }
