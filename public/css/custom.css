@@ -58,7 +58,8 @@
 
 .fa-angle-up:hover,
 .fa-angle-down:hover,
-.task_checkbox:hover {
+.task_checkbox:hover,
+.remove-task:hover {
     cursor: pointer;
 }
 
