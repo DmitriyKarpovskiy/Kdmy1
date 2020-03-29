@@ -26,7 +26,7 @@
           </div>
         </div>
       </div>
-
+ 
       <div class="container-c container task-creating">
         <div class="container-c container text-center create-task">
             <form action="{{ route('tasks.store') }}" method="POST" class="form">
@@ -34,7 +34,7 @@
                 <i class="glyphicon glyphicon-plus"></i>
 
               </div>
-                <div class="col-md-8 p0">
+                <div class="col-md-8 inl-b">
                     <input type="text" name="name"  class="form-control">
                 </div>
                 <input type="hidden" name="project_id" value="{{ $project->id }}">
@@ -46,7 +46,7 @@
         </div>
                @foreach($project->tasks as $task)
                  @if($task->project_id == $project->id)
-                 <div class="task task-row text-center container-fluid">
+                 <div class="task text-center container-fluid">
                    <div class="col-md-1 task_checkbox">
                        <input type="hidden" name="task_id" value="{{ $task->id }}">
                        <input type="hidden" name="order" value="{{ $task->order }}">
