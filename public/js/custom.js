@@ -34,18 +34,6 @@ $(function() {
         $('input[name=replacement_id]').val(replacement_id);
         $(this).siblings("form").submit();
         console.log($(this).siblings("form"));
-        // if (replacement_id) {
-        //     $.post({
-        //         url: '/tasks/order',
-        //         data: {
-        //             target_id: target_id,
-        //             replacement_id: replacement_id
-        //         },
-        //         success(response) {
-        //           window.location.href = '/projects'
-        //         }
-        //     });
-        // }
     });
     $(document).ready(function() {
         var ml = $(".navbar").outerWidth();

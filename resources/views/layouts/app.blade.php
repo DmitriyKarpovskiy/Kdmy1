@@ -31,7 +31,7 @@
 
                     <!-- Branding Image -->
                     <div class="navbar-brand text-center">
-                      SIMPLE TODO LIST
+                      ToTODO LIST
                     </div>
                 </div>
 
