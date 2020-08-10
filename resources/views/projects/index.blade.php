@@ -9,8 +9,6 @@
           <div class="col-md-1"><i class="fa fa-calendar-alt"></i></div>
           <div class="col-md-9 project-name">{{ $project->name }}</div>
 
-          
-
           <div class="col-md-1 inl-b">
             <a href="{{ route('projects.edit', [$project->id]) }}">
             <i class="fa fa-pen"></i>
