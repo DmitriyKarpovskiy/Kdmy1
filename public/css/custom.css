@@ -8,12 +8,13 @@
     border-width: 1px;
     border-style: solid;
     margin-bottom: 10px;
-    background-color: #d6d6c2;
+    background-image: linear-gradient(120deg, #87CEEB, #FFFFE0);
 }
 
 .container-c {
     margin-left: auto;
     margin-right: auto;
+    width: 80%;
 }
 
 .project-header div {
