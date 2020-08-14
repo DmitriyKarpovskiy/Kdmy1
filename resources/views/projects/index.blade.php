@@ -32,7 +32,7 @@
                 <i class="glyphicon glyphicon-plus"></i>
 
               </div>
-                <div class="col-md-8 inl-b">
+                <div class="col-md-9 inl-b ">
                     <input type="text" name="name"  class="form-control">
                 </div>
                 <input type="hidden" name="project_id" value="{{ $project->id }}">
@@ -62,12 +62,12 @@
                        <i class="fa fa-angle-up"></i>
                        <i class="fa fa-angle-down"></i>
                      </div>
-                      <div class="col-md-1 height_100">
+                      <div class="col-md-1">
                           <a href="{{ route('tasks.edit', [$task->id]) }}">
                               <i class="fa fa-pen task-gi"></i>
                           </a>
                       </div>
-                     <div class="col-md-1 height_100">
+                     <div class="col-md-1">
                          <form action="{{ route('tasks.destroy', [$task->id]) }}" method="post">
                              <input type="hidden" name="_method" value="DELETE">
                              <input type="hidden" name="_token" value="{{ csrf_token() }}">
