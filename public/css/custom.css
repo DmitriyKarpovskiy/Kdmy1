@@ -10,13 +10,18 @@ body {
 .task,
 .todo {
     border-color: black;
-    border-width: 1px;
-    border-style: solid;
-    margin-bottom: 10px;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-bottom: 20px;
     background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid grey;
+    border-radius: 10px 10px 10px 10px;
     /*background-image: radial-gradient(circle, #87CEEB, #FFFFE0);*/
+}
+
+.todo {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container-c {
@@ -62,6 +67,7 @@ body {
     width: 200px;
     margin-bottom: 20px;
     font-weight: 900;
+    color: whitesmoke;
 }
 
 .fa-angle-up:hover,
@@ -70,6 +76,10 @@ body {
 .remove-task:hover,
 .remove-project:hover {
     cursor: pointer;
+}
+
+.task:hover {
+    background-color: whitesmoke;
 }
 
 .add_task_btn {
@@ -88,4 +98,28 @@ body {
 
 .center {
     position: relative;
+}
+
+.navbar-nav>li>a,
+.navbar-text,
+a.navbar-brand {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.project-header {
+    border: 1px solid #3490dc;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-control {
+    margin-top: 10px;
+}
+
+.todo_create {
+    background-color: #3490dc;
+    color: #fff;
+    font-weight: 800;
+    border-radius: 10px 10px 10px 10px;
 }

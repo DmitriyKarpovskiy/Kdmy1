@@ -2,8 +2,8 @@
 
 @section('content')
     @foreach($projects as $project)
-
-      <div class="todo">
+    <div class="raw">
+      <div class="todo col-md-8 col-md-offset-2">
       <div class="container-fluid project-container">
         <div class="container-c container project-header">
           <div class="col-md-1"><i class="fa fa-calendar-alt"></i></div>
@@ -78,6 +78,7 @@
                  @endif
                @endforeach
            </div>
+       </div>
        </div>
 
 
