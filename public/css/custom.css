@@ -73,6 +73,7 @@ body {
 .fa-angle-up:hover,
 .fa-angle-down:hover,
 .task_checkbox:hover,
+.task_checkbox_done:hover,
 .remove-task:hover,
 .remove-project:hover {
     cursor: pointer;
@@ -111,6 +112,12 @@ a.navbar-brand {
     border: 1px solid #3490dc;
     width: 100%;
     margin-top: 10px;
+    background-image: url(images/texture.jpg);
+    color: white;
+}
+
+.project-header .fa {
+    color: white;
 }
 
 .form-control {
@@ -122,4 +129,8 @@ a.navbar-brand {
     color: #fff;
     font-weight: 800;
     border-radius: 10px 10px 10px 10px;
+}
+
+.task_checkbox_completed {
+    text-decoration: line-through;
 }

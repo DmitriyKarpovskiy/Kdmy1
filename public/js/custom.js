@@ -19,6 +19,7 @@ $(function() {
         $.post({
             url: url
         })
+        $("#task_checkbox").toggleClass('task_checkbox task_checkbox_completed');
     });
 
     $('body').on('click', '.ordering .fa', function() {

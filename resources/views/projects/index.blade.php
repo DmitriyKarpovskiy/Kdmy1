@@ -48,7 +48,7 @@
                    <div class="col-md-1 task_checkbox">
                        <input type="hidden" name="task_id" value="{{ $task->id }}">
                        <input type="hidden" name="order" value="{{ $task->order }}">
-                       <input type="checkbox" class="task_checkbox" @if($task->status) checked @endif>
+                       <input type="checkbox" class="task_checkbox" id="task_checkbox" @if($task->status) checked @endif>
                     </div>
                     <div class="col-md-8 height_100">
                         {{ $task->name }}
