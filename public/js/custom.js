@@ -25,12 +25,10 @@ $(function() {
     $('body').on('click', '.ordering .fa', function() {
 
         var task = $(this).closest('.task');
-        var target_id = task.find('input[name=task_id]').val();
-        var target_order = task.find('input[name=order]').val();
+        var target_id = task.find('input[name=task_id]').val()
         var direction = $(this).hasClass('fa-angle-up');
         var replacement = direction ? task.prev() : task.next();
         var replacement_id = replacement.find('input[name=task_id]').val();
-        var replacement_order = replacement.find('input[name=order]').val();
         $('input[name=target_id]').val(target_id);
         $('input[name=replacement_id]').val(replacement_id);
         $(this).siblings("form").submit();
