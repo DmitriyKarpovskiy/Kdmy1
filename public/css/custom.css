@@ -135,6 +135,12 @@ a.navbar-brand {
     text-decoration: line-through;
 }
 
-#dropdown {
+#dropdown,
+.menu_item {
+    color: whitesmoke;
+}
+
+.menu_item:hover {
+    font-weight: bold;
     color: whitesmoke;
 }
