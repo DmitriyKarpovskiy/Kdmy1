@@ -134,3 +134,7 @@ a.navbar-brand {
 .task_checkbox_completed {
     text-decoration: line-through;
 }
+
+#dropdown {
+    color: whitesmoke;
+}

@@ -14,12 +14,12 @@ $(function() {
         $(this).siblings("form").submit();
     });
 
-    $('.task_checkbox').click(function() {
+    $('.task_checkbox').click(function(event) {
+        event.stopPropagation();
         var url = "/tasks/change_status/" + $(this).siblings('input[name="task_id"]').val();
         $.post({
             url: url
         })
-        $("#task_checkbox").toggleClass('task_checkbox task_checkbox_completed');
     });
 
     $('body').on('click', '.ordering .fa', function() {
