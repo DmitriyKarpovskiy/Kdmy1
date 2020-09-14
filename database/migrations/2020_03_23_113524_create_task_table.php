@@ -20,6 +20,7 @@ class CreateTaskTable extends Migration
             $table->boolean('status')->default(false);
             $table->unsignedBigInteger('project_id');
             $table->foreign('project_id')->references('id')->on('project')->onDelete('cascade');
+            $table->string('deadline');
             $table->timestamps();
         });
     }

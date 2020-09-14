@@ -33,7 +33,8 @@
 
               </div>
                 <div class="col-md-9 inl-b ">
-                    <input type="text" name="name"  class="form-control">
+                    <input type="text" name="name" placeholder="Name"  class="form-control">
+                    <input type="text" name="datepicker" id="datepicker" data-provide="datepicker" placeholder="Deadline (YYYY-MM-DD)" class="form-control">
                 </div>
                 <input type="hidden" name="project_id" value="{{ $project->id }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -50,7 +51,16 @@
                        <input type="hidden" name="order" value="{{ $task->order }}">
                        <input type="checkbox" class="task_checkbox" id="task_checkbox" @if($task->status) checked @endif>
                     </div>
-                    <div class="col-md-8 height_100">
+                  <div class="form-group .col-md-4"> <!-- Date input -->
+                        <label class="control-label" for="date">Deadline:</label>
+                        <input class="form-control" placeholder="" type="text" value="{{ $task->deadline }}" readonly>
+                        <form class="" action="{{ route('tasks.order') }}" method="post">
+                         <input type="hidden" name="target_id" value="">
+                         <input type="hidden" name="replacement_id" value="">
+                         <input type="hidden" name="_token" value="{{ csrf_token()  }}">
+                       </form>
+                 </div>
+                    <div class="col-md-4 height_100">
                         {{ $task->name }}
                      </div>
                      <div class="col-md-1 height_100 ordering">
@@ -95,5 +105,5 @@
         </a>
     </div>
 
-@endsection
-    
+  
+    @endsection

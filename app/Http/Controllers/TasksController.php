@@ -24,6 +24,7 @@ class TasksController extends Controller
     $task->name = $request->name;
     $task->project_id = $request->project_id;
     $task->order = Task::getLastOrder($request->project_id) + 1;
+    $task->deadline = $request->datepicker;
     return $task->save()
     ? redirect()->route('home')->withSuccess('Task created')
     : redirect()->route('home')->withError('Task wasn`t created');

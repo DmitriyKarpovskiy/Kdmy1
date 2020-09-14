@@ -32,11 +32,15 @@ $(function() {
         $('input[name=target_id]').val(target_id);
         $('input[name=replacement_id]').val(replacement_id);
         $(this).siblings("form").submit();
-        console.log($(this).siblings("form"));
     });
     $(document).ready(function() {
         var ml = $(".navbar").outerWidth();
         ml /= 3;
         $(".navbar-brand").css({ "margin-left": ml });
+    });
+
+    $('.datepicker').datepicker({
+        dateFormat: 'yy-dd-mm',
+        startDate: '-3d'
     });
 });
