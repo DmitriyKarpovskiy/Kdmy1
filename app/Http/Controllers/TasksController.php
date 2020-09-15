@@ -18,7 +18,8 @@ class TasksController extends Controller
   {
     $this->validate($request, [
       'name' => 'required|max:200|',
-      'project_id' =>'required'
+      'project_id' =>'required',
+      'deadline' =>'required'
     ]);
     $task = new Task;
     $task->name = $request->name;
